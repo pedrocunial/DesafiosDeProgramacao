@@ -1,0 +1,1 @@
+Enquanto a diferença entre as duas variáveis ou a menor delas for diferente de zero, guarde a diferença entre as duas como uma das variáveis e a menor delas como a outra variável em sua próxima iteração. Se a diferença entre elas for igual a zero, retorne a menor. Se a menor for zero, retorne a diferença.
