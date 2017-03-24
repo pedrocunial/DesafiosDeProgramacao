@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include <sys/time.h>
 
 
 void memswp(int *a, int *b)
@@ -62,16 +64,16 @@ void print_array(int *vec, size_t n) {
 
 int main(void)
 {
-    int vec[] = {2, 3, 2, 1, 4, 2};
-    bubble_sort(vec, 6);
-    print_array(vec, 6);
+    /* int vec[] = {2, 3, 2, 1, 4, 2}; */
+    /* bubble_sort(vec, 6); */
+    /* print_array(vec, 6); */
 
-    int vec2[] = {2, 3, 2, 1, 4, 2};
-    selection_sort(vec2, 6);
-    print_array(vec2, 6);
+    /* int vec2[] = {2, 3, 2, 1, 4, 2}; */
+    /* selection_sort(vec2, 6); */
+    /* print_array(vec2, 6); */
 
-    int vec3[] = {2, 3, 2, 1, 4, 2};
-    insertion_sort(vec3, 6);
-    print_array(vec3, 6);
+    /* int vec3[] = {2, 3, 2, 1, 4, 2}; */
+    /* insertion_sort(vec3, 6); */
+    /* print_array(vec3, 6); */
     return 0;
 }
