@@ -21,7 +21,7 @@ void merge_r(int vec[], size_t beg, size_t end)
   size_t len = (end - beg) / 2;
   if (!len) return;
   merge_r(vec, beg, end - len);
-  merge_r(vec, beg + len, end);
+  merge_r(vec, beg + len + 1, end);
   insertion(vec, beg, end);
 }
 
@@ -30,7 +30,7 @@ void merge(int vec[], size_t len)
   merge_r(vec, 0, len - 1);
 }
 
-void print_array(int *vec, size_t n) {
+void print_array(int vec[], size_t n) {
   printf("[");
   for (size_t i = 0; i < n; i++) {
     printf("%d", vec[i]);
