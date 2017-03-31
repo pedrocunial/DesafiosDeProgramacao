@@ -16,13 +16,41 @@ void insertion(int vec[], size_t beg, size_t end)
   }
 }
 
-void merge_r(int vec[], size_t beg, size_t end)
+void merge_r(int vec[], int beg, int end)
 {
-  size_t len = (end - beg) / 2;
-  if (!len) return;
-  merge_r(vec, beg, end - len);
-  merge_r(vec, beg + len + 1, end);
-  insertion(vec, beg, end);
+  size_t i, j, ilim, id, lim, len;
+  int *veccpy;
+  ilim = end - beg;
+  len = ilim / 2;
+  j = len + 1;
+  printf("%lu %lu\n", beg, end);
+  if (beg <= end) return;
+  merge_r(vec, beg, len);
+  merge_r(vec, j, end);
+
+  /* Merge */
+  i = beg;
+  veccpy = malloc((ilim + 1) * (sizeof(int)));
+  for (id = 0; id < lim; id++) {
+    if (i > ilim) {
+      veccpy[id] = vec[j];
+      j++;
+    } else if (j > end) {
+      veccpy[id] = vec[i];
+      i++;
+    } else {
+      if (vec[i] < vec[j]) {
+        veccpy[id] = vec[i];
+        i++;
+      } else {
+        veccpy[id] = vec[j];
+        j++;
+      }
+    }
+  }
+  for (i = 0; i < lim; i++) {
+    vec[i] = veccpy[i];
+  }
 }
 
 void merge(int vec[], size_t len)
