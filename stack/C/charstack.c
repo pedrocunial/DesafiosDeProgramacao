@@ -20,27 +20,3 @@ char charstack_pop(charstack *s) {
 void charstack_delete(charstack *s) {
   free(s);
 }
-
-
-/* int main(void) */
-/* { */
-/*   charstack *cs = charstack_new(); */
-/*   charstack_push(cs, '\n'); */
-/*   charstack_push(cs, 'H'); */
-/*   charstack_push(cs, 'e'); */
-/*   charstack_push(cs, 'l'); */
-/*   charstack_push(cs, 'l'); */
-/*   charstack_push(cs, 'o'); */
-/*   charstack_push(cs, ' '); */
-/*   charstack_push(cs, 'W'); */
-/*   charstack_push(cs, 'o'); */
-/*   charstack_push(cs, 'r'); */
-/*   charstack_push(cs, 'l'); */
-/*   charstack_push(cs, 'd'); */
-/*   charstack_push(cs, '!'); */
-
-/*   while (cs->sp) { */
-/*     printf("%c", charstack_pop(cs)); */
-/*   } */
-/*   return 0; */
-/* } */
