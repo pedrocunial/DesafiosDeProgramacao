@@ -12,6 +12,7 @@ public:
   CharStack();
   void push(char value);
   char pop();
+  bool empty();
   ~CharStack();
 };
 
