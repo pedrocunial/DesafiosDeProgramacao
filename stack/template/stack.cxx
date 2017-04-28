@@ -1,33 +1,33 @@
 #include "stack.hxx"
 
-template<class T>
+template<typename T>
 Stack<T>::Stack()
 {
-  sp = 1;
+  sp = 0;
 }
 
-template<class T>
+template<typename T>
 Stack<T>::~Stack()
 {
   vec.clear();
 }
 
-template<class T>
+template<typename T>
 void Stack<T>::push(T value)
 {
   vec.push_back(value);
   sp++;
 }
 
-template<class T>
+template<typename T>
 T Stack<T>::pop()
 {
   sp--;
   return vec[sp];
 }
 
-template<class T>
+template<typename T>
 bool Stack<T>::empty()
 {
-  return sp <= 1;
+  return sp <= 0;
 }
