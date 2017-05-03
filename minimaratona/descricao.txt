@@ -1,0 +1,2 @@
+Escreva um programa em C++ que recebe um inteiro n da entrada padrão e imprime todas as
+cadeias de DNA possiveis em ordem lexicografica
