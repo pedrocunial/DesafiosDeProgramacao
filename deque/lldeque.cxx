@@ -15,14 +15,13 @@ Deque<T>::~Deque()
     front = front->next;
     delete tmp;
   }
-  if (back != NULL)
-    delete back;
   delete front;
 }
 
 template<typename T>
 T Deque<T>::pop_back()
 {
+  if (back == NULL) return 0;
   T value = back->value;
   node_t *tmp = back;
   back = back->prev;
@@ -34,6 +33,7 @@ T Deque<T>::pop_back()
 template<typename T>
 T Deque<T>::pop_front()
 {
+  if (front == NULL) return 0;
   T value = front->value;
   node_t *tmp = front;
   front = front->next;
@@ -53,19 +53,37 @@ void Deque<T>::push_back(T value)
 {
   node_t *tmp = new node_t;
   tmp->next = NULL;
-  tmp->prev = back;
+  if (back != NULL) {
+    tmp->prev = back;
+    back->next = tmp;
+  } else if (front != NULL) {
+    tmp->prev = front;
+    front->next = tmp;
+  } else {
+    tmp->prev = NULL;
+  }
   tmp->value = value;
-  back->next = tmp;
   back = tmp;
+  if (front == NULL)
+    front = back;
 }
 
 template<typename T>
 void Deque<T>::push_front(T value)
 {
   node_t *tmp = new node_t;
-  tmp->next = front;
   tmp->prev = NULL;
+  if (front != NULL) {
+    tmp->next = front;
+    front->prev = tmp;
+  } else if (back != NULL) {
+    tmp->next = back;
+    back->prev = tmp;
+  } else {
+    tmp->next = NULL;
+  }
   tmp->value = value;
-  front->prev = tmp;
   front = tmp;
+  if (back == NULL)
+    back = front;
 }
