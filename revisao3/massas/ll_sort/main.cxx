@@ -61,7 +61,7 @@ node_t<int> *middle_node_simplified(node_t<int> *head)
   node_t<int> *mid  = NULL;
   bool         flip = false;
   while (curr != NULL) {
-    curr = curr->next;
+    cout << "middle_node" << curr->value << endl;
     if (flip) {
       if (mid == NULL)
         mid = head;
@@ -71,7 +71,9 @@ node_t<int> *middle_node_simplified(node_t<int> *head)
     } else {
       flip = true;
     }
+    curr = curr->next;
   }
+  cout << "out middle_node" << endl;
   return mid;
 }
 
@@ -99,6 +101,7 @@ void node_join(node_t<int> *a, node_t<int> *b)
     b = b->next;
   }
   while ((a != NULL) || (b != NULL)) {
+    cout << "while" << endl;
     if (a == NULL)
       curr->next = b;
     else if (b == NULL)
@@ -120,9 +123,7 @@ void merge_sort_r(node_t<int> *head, node_t<int> *tail)
     // base
     return;
   a = middle_node_simplified(head);
-  if ((a == head) || (a == NULL)) return;
   b = a->next;
-  if ((b == tail) || (b == NULL)) return;
   a->next = NULL;
   merge_sort_r(head, a);
   merge_sort_r(b, tail);
