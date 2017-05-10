@@ -6,8 +6,20 @@ using namespace std;
 size_t max(int a, int b);
 size_t lcs(string &str0, string &str1, const size_t len0, const size_t len1);
 
-/* Returns length of LCS for X[0..len0-1], Y[0..len1-1] */
-// LCS: Longest Common Subsequence
+/*
+  Longest Common Subsequence:
+  str0 e str1: Sequência de caracteres de entrada
+  m e n: Tamanho da sequência a ser analizada, sendo m o tamanho de str0 e n de
+         str1
+  memo: Matriz de memoização
+  line_size: Tamanho da linha da matriz, utilizado para o cálculo da posição de
+             um membro da matriz pelos indices i e j, uma vez que a
+             representação da matriz é feita por um array simples (otimização de
+             cache)
+
+  A cada iteração do problema, os valores de m ou n diminuem, até chegarem em 0
+  (caso base)
+*/
 size_t lcs(string &str0, string &str1, const size_t len0, const size_t len1)
 {
   size_t L[len0 + 1][len1 + 1];
@@ -18,8 +30,11 @@ size_t lcs(string &str0, string &str1, const size_t len0, const size_t len1)
   for (i = 0; i <= len0; i++) {
     for (j = 0; j <= len1; j++) {
       if ((i == 0) || (j == 0))
+        // Análogo ao caso base da recursão
         L[i][j] = 0;
       else if (str0[i - 1] == str1[j - 1])
+        // Caso os caracteres das sequencias sejam iguais, encontramos um
+        // membro da subsequência
         L[i][j] = L[i - 1][j - 1] + 1;
       else
         L[i][j] = max(L[i - 1][j], L[i][j - 1]);
