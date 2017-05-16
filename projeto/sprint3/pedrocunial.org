@@ -10,4 +10,31 @@
   memoização e como a programação dinâmica otimiza o código. Seguindo, explica-se
   utilizações comuns do algoritmo e finalmente a implementação bottomup do mesmo.
 
-  Um storyboard da apresentação pode ser visto em: https://docs.google.com/presentation/d/1FgQ14rb9tX8wO0tv0V1yqm0nkr294IhXvj44saqLLC8/edit?usp=sharing
+  Um storyboard do video pode ser visto em: https://docs.google.com/presentation/d/1FgQ14rb9tX8wO0tv0V1yqm0nkr294IhXvj44saqLLC8/edit?usp=sharing
+
+* Sketch
+  Para a aula, pretendo fazer algo um pouco mais lúdico em comparação ao vídeo,
+  simulando um caso onde alguém fora contratado para resolver um caso onde o governo
+  japonês busca "O Escolhido", filho de Pai Mei, o qual se encontra dando aula no
+  Insper. Por saberem que sou estudande de computação na faculdade, eles me contrataram
+  para que descobrisse quem é este escolhido. Minha primeira ideia era de que o próprio
+  professor Marcelo Hashimoto seria o "escolhido", no entanto, para ter certeza disso
+  precisaria fazer um teste de DNA para confirmar a paternidade do professor.
+
+  Sob a premissa de tentar descobrir a verdadeira origem do professor, desenvolveria a
+  questão do problema da maior subsequência, onde desejo fazer um teste de paternidade
+  entre o professor e o Pai Mei (cujo DNA caiu em domínio público).
+
+  Dai em diante temos um desenvolvimento análogo ao do vídeo, começando por uma melhor
+  caracterização do problema, seguido da sua implementação ingênua, a qual pretendo fazer
+  em pseudo-código na lousa (acredito que uma dinâmica em alguma línguagem de programação
+  possa acabar atrasando o desenvolvimento da aula por questões menores como sintaxe, por
+  exemplo). Em seguida, explico o conceito de memoização e adiciono ela ao código,
+  exemplicando como isso melhora muito o desempenho do mesmo (uma boa forma de mostrar isso
+  é abrir a "árvore" da recursão e mostrar os cálculos redundantes).
+
+  Com isso, mostro que rodei o código e descobri que o verdadeiro "escolhido" era na
+  verdade o prof. Luciano Soares e finalizo a aula assim.
+
+  Não acredito que a implementação bottom up va caber no tempo de 15 minutos, mas não
+  descarto esta possibilidade.
