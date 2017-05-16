@@ -1,0 +1,13 @@
+#+AUTHOR: Pedro Cunial
+#+TITLE: Sprint 3
+
+* Esqueleto
+  Pretendo formular um vídeo seguindo um modelo similar ao do canal Computerphile
+  do youtube (https://www.youtube.com/user/Computerphile), criado por acadêmicos
+  de britânicos de computação em geral. A ideia é introduzir a origem do problema,
+  seguido da implementação ingênua, da qual pode-se partir para a implementação
+  topdown. A partir da implementação topdown pode-se explicar melhor os conceitos de
+  memoização e como a programação dinâmica otimiza o código. Seguindo, explica-se
+  utilizações comuns do algoritmo e finalmente a implementação bottomup do mesmo.
+
+  Um storyboard da apresentação pode ser visto em: https://docs.google.com/presentation/d/1FgQ14rb9tX8wO0tv0V1yqm0nkr294IhXvj44saqLLC8/edit?usp=sharing
